@@ -11,7 +11,8 @@ workspaces = [m["workspaces"]['elements'] for m in data["monitors"]["elements"]]
 for index, workspace in enumerate(workspaces):
     for i, w in enumerate(workspace):
         windows = [m["windows"]['elements'] for m in w["containers"]["elements"]]
-        print(w)
+        for window in windows:
+            print(window)
         print(f'windows {len(windows)} on ws {i} on bigger {index}')
 
 
